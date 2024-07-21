@@ -3,18 +3,18 @@ package com.prabhakar.activitylifecycle
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.os.PersistableBundle
 import android.util.Log
+import androidx.core.content.ContextCompat.startActivity
+import androidx.media3.common.util.Log
 import kotlinx.android.synthetic.main.activity_main.btn
-import kotlin.math.log
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
         printLog("onCreate")
-        btn.setOnClickListener{
-            startActivity(Intent(this,ActivityB::class.java))
+        btn.setOnClickListener {
+            startActivity(Intent(this, ActivityB::class.java))
         }
     }
 
